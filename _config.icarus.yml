@@ -305,7 +305,7 @@ widgets:
         # Subscription form action URL
         action_url: 'https://api.follow.it/subscription-form/N3FZc2ZodG5LNDZmMDE2SUFKR2dvSHRzYWk1RVd1T2kzN0ppMWhGc3RONFJaV2J0MDU3aDNMRkorQS9KS0RaN0pwVzVrQmlXWUJJc3J6bWJqQnZzVzFJSDJqT2pqUmorcElocjltN2QzdVh0eEp5eUZZbVI4dE9SNXVQTHpoS2V8VTRzNEhaaWRURzFycEZhQlkwd29NT05pRkZoVVY5Wng0VWwxdmd2OTlWcz0=/8'
         # Feed claiming verification code
-        verification_code: 'https://follow.it/hexo2?action=followPub'
+        verification_code: 'K4jjjLu6a4GvlqnW19UK'
 # Plugin configurations
 # https://Virifortissimi.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
