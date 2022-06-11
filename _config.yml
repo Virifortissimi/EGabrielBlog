@@ -1,11 +1,11 @@
-title: Hexo
+title: E Gabriel Blog
 subtitle: ''
-description: ''
+description: 'A blog that talks Dotnet technologies, Cloud technologies, Programming and Lifestyle'
 keywords: null
 author: Eghosa Gabriel
 language: en
 timezone: 'Africa/Lagos'
-url: http://example.com
+url: https://www.egabriel.dev
 permalink: '/:year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
