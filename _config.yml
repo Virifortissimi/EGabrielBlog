@@ -66,3 +66,17 @@ algolia:
     applicationID: My-Hexo-Site
     indexName: V2XIA7SDY6
     apiKey: 4145e7420cec49761b3b0ef3ea9f03e6
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
+

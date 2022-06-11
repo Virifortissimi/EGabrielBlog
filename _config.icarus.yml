@@ -110,7 +110,7 @@ navbar:
         Archives: /archives
         Categories: /categories
         Tags: /tags
-        About: /about
+        About: /about/index
     # Links to be shown on the right of the navigation bar
     links:
         Download on GitHub:
@@ -128,7 +128,7 @@ footer:
             url: https://creativecommons.org/licenses/by/4.0/
         Download on GitHub:
             icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+            url: https://github.com/Virifortissimi
 # Article related configurations
 article:
     # Code highlight settings
@@ -156,17 +156,17 @@ article:
             icon: fab fa-creative-commons-nc
             url: https://creativecommons.org/licenses/by-nc/4.0/
 # Search plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Search/
+# https://Virifortissimi.github.io/hexo-theme-icarus/categories/Plugins/Search/
 search:
     type: insight
 # Comment plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
+# https://Virifortissimi.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
     type: facebook
     # Disqus shortname
     # shortname: ''
 # Donate plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
+# https://Virifortissimi.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
     # "Buy me a coffee" donate button configurations
     -
@@ -186,7 +186,7 @@ donates:
         # Currency code
         currency_code: USD
 # Share plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
+# https://Virifortissimi.github.io/hexo-theme-icarus/categories/Plugins/Share/
 share:
     type: sharethis
     # URL to the ShareThis share plugin script
@@ -203,7 +203,7 @@ sidebar:
         # Whether the sidebar sticks to the top when page scrolls
         sticky: false
 # Sidebar widget configurations
-# http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
+# http://Virifortissimi.github.io/hexo-theme-icarus/categories/Widgets/
 widgets:
     # Profile widget configurations
     -
@@ -225,21 +225,15 @@ widgets:
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: https://github.com/ppoffice
+        follow_link: https://github.com/Virifortissimi
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
-                url: https://github.com/ppoffice
-            Facebook:
-                icon: fab fa-facebook
-                url: https://facebook.com
+                url: https://github.com/Virifortissimi
             Twitter:
                 icon: fab fa-twitter
-                url: https://twitter.com
-            Dribbble:
-                icon: fab fa-dribbble
-                url: https://dribbble.com
+                url: https://twitter.com/_codease
             RSS:
                 icon: fas fa-rss
                 url: /
@@ -309,11 +303,11 @@ widgets:
         # Hint text under the email input
         description: 
         # Subscription form action URL
-        action_url: ''
+        action_url: 'https://api.follow.it/subscription-form/N3FZc2ZodG5LNDZmMDE2SUFKR2dvSHRzYWk1RVd1T2kzN0ppMWhGc3RONFJaV2J0MDU3aDNMRkorQS9KS0RaN0pwVzVrQmlXWUJJc3J6bWJqQnZzVzFJSDJqT2pqUmorcElocjltN2QzdVh0eEp5eUZZbVI4dE9SNXVQTHpoS2V8VTRzNEhaaWRURzFycEZhQlkwd29NT05pRkZoVVY5Wng0VWwxdmd2OTlWcz0=/8'
         # Feed claiming verification code
-        verification_code: ''
+        verification_code: 'https://follow.it/hexo2?action=followPub'
 # Plugin configurations
-# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
+# https://Virifortissimi.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
     # Enable page startup animations
     animejs: true
@@ -388,7 +382,7 @@ plugins:
         # Twitter Pixel ID
         pixel_id: 
 # CDN provider settings
-# https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
+# https://Virifortissimi.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
 providers:
     # Name or URL template of the JavaScript and/or stylesheet CDN provider
     cdn: jsdelivr
