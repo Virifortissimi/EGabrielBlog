@@ -13,7 +13,7 @@ head:
     # https://developer.mozilla.org/en-US/docs/Web/Manifest
     manifest:
         # Name of the web application (default to the site title)
-        name: 
+        name: Egabriel Blog
         # The displayed name of the web application
         # when there is not enough space to display full name
         short_name: 
@@ -190,7 +190,7 @@ donates:
 share:
     type: sharethis
     # URL to the ShareThis share plugin script
-    install_url: ''
+    install_url: 'https://platform-api.sharethis.com/js/sharethis.js#property=62a47a7905284b00197c549b&product=inline-share-buttons'
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -255,8 +255,10 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
-            Hexo: https://hexo.io
-            Bulma: https://bulma.io
+            Github: https://www.github.com/Virifortissimi
+            Email: 
+            Twitter: https://twitter.com/_codease
+            Youtube: https://www.youtube.com/channel/UC1Bm_utLdSD45EkDa6AuU4w
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -277,15 +279,6 @@ widgets:
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: tags
-    # Google FeedBurner email subscription widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: subscribe_email
-        # Hint text under the email input
-        description: 
-        # Feedburner ID
-        feedburner_id: ''
     # Google AdSense unit configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
