@@ -213,13 +213,13 @@ widgets:
     -   type: recent_posts
         position: right
         # Author name
-        author: Your name
+        author: Gabriel Eghosa
         # Author title
-        author_title: Your title
+        author_title: Dotnet Software Developer
         # Author's current location
-        location: Your location
+        location: Lagos, Nigeria
         # URL or path to the avatar image
-        avatar: 
+        avatar: https://res.cloudinary.com/virifortissimi/image/upload/v1654950021/1606371102673.jpg
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
@@ -284,9 +284,9 @@ widgets:
         position: left
         type: adsense
         # AdSense client ID
-        client_id: ''
+        client_id: 'ca-pub-7334225597653931'
         # AdSense AD unit ID
-        slot_id: ''
+        slot_id: '5455350894'
     # Follow.it email subscription widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
