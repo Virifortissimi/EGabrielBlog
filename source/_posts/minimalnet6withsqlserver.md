@@ -22,18 +22,18 @@ I particularly find minimal APIs exciting because you could in about 10 minutes 
 
 > Prerequisites
 
-- Visual Studio 2022 with the ASP.NET and web development workload.
+- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/#download) with the ASP.NET and web development workload.
 or
 
-- Visual Studio Code
-- C# for Visual Studio Code (latest version)
-- .NET 6.0 SDK
+- [Visual Studio Code](https://code.visualstudio.com/download)
+- [C# for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) (latest version)
+- [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 or
 
-- Visual Studio 2022 for Mac latest preview
+- [Visual Studio 2022 for Mac latest preview](https://visualstudio.microsoft.com/vs/mac/preview/)
 and
 
-- SQL Server Express
+- [SQL Server Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 
 
 For this article. I would be working with **Visual Studio 2022**. You could follow through and create yours as you read the article or you could just get the source code and look through the code
@@ -117,4 +117,4 @@ Add the following codes to the **Program** class, just after the **app.UseHttpsR
 
 We’ve just added 4 different types of routes (Get, Post, Put, Delete) using patterns we were already familiar with. We also passed in **DataContext** as a dependency to the RequestDelegate so as to access the Database.
 
-In this tutorial, you have learned how to set up a .Net6 minimal Rest API with SQL Server as a datastore. In our next article, we created an [Azure SQL Database single database on Azure](https://www.egabriel.dev/) and used it on our project. Read [HERE](https://www.egabriel.dev/)
+In this tutorial, you have learned how to set up a .Net6 minimal Rest API with SQL Server as a datastore. In our next article, we created an [Azure SQL Database single database on Azure](https://www.egabriel.dev/2022/06/13/dotnet6azuresqldatabase/#more) and used it on our project. Read [HERE](https://www.egabriel.dev/2022/06/13/dotnet6azuresqldatabase/#more)
