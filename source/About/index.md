@@ -17,3 +17,7 @@ date: 2022-06-11 11:04:53
 - Cohost of the [.Net Book Study](https://www.youtube.com/watch?v=TmKTND9m8OI&list=PL1QoqKQg7_kZkZHg8oJJoACNeFonEzksB) where we discuss everything DotNet weekly
 - Dotnet Lagos User group Volunteer
 - Panelist, [Azure Nigeria Community Conference 2022](https://www.youtube.com/watch?v=X7Ilo6xQnBc), Open Source in Africa
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7334225597653931"
+     crossorigin="anonymous"></script>

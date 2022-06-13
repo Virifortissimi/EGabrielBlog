@@ -118,3 +118,7 @@ Add the following codes to the **Program** class, just after the **app.UseHttpsR
 We’ve just added 4 different types of routes (Get, Post, Put, Delete) using patterns we were already familiar with. We also passed in **DataContext** as a dependency to the RequestDelegate so as to access the Database.
 
 In this tutorial, you have learned how to set up a .Net6 minimal Rest API with SQL Server as a datastore. In our next article, we created an [Azure SQL Database single database on Azure](https://www.egabriel.dev/2022/06/12/dotnet6azuresqldatabase/#more) and used it on our project. Read [HERE](https://www.egabriel.dev/2022/06/12/dotnet6azuresqldatabase/#more)
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7334225597653931"
+     crossorigin="anonymous"></script>

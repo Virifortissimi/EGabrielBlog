@@ -95,3 +95,6 @@ Our TodoItem has successfully been created. Next, let's check the **Query Editor
 
 
 In this tutorial, you have learned how to provision an Azure SQL Database single database and use that database in our .Net6 Rest API. In our next article, we would deploy our Rest API to Azure App Service.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7334225597653931"
+     crossorigin="anonymous"></script>

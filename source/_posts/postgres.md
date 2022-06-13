@@ -99,3 +99,6 @@ If you check the database using the PostgreSQL database server, you can see that
 <img src="https://res.cloudinary.com/virifortissimi/image/upload/v1654973327/1_LAhO6LN8uIePC1K67ULL-A.png" class="" width="auto" height="auto" alt="The students table created with Id and Name columns" />
 
 In this tutorial, you have learned how to connect to the PostgreSQL database server in an ASPNET WEB API using Entity Framework Core Code first approach.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7334225597653931"
+     crossorigin="anonymous"></script>
