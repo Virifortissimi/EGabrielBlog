@@ -4,6 +4,7 @@ description: 'A blog that talks Dotnet technologies, Cloud technologies, Program
 keywords: null
 author: Eghosa Gabriel
 language: en
+google_analytics: G-CL84VQ0E4W
 timezone: 'Africa/Lagos'
 url: https://www.egabriel.dev
 permalink: '/:year/:month/:day/:title/'
