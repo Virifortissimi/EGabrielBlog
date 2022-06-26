@@ -4,6 +4,8 @@ date: 2022-06-11 11:04:53
 # Hi! I'm Eghosa Gabriel 
 ### A Dotnet Software developer with a passion for learning new things and solving problems using technology. I welcome challenges that bring out the genius in me.
 
+### Building the [#.NetBookStudy](https://www.dotnetbookstudy.com) community.
+
 ### Connect with me at [connect@egabriel.dev](mailto:connect@egabriel.dev?subject=I%20would%20like%20to%20connect%20with%20you)
 ### Hire me at by sending an email to [hire_me@egabriel.dev](mailto:hire_me@egabriel.dev)
 
