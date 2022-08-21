@@ -112,6 +112,7 @@ navbar:
         Tags: /tags
         About: /about/index
         .NetBookStudy: https://www.dotnetbookstudy.com
+        EGabriel Bootcamp: /bootcamp/index
     # Links to be shown on the right of the navigation bar
     links:
         Download on GitHub:
