@@ -1,28 +1,45 @@
-title: About
+title: EGabriel Bootcamp
 date: 2022-06-11 11:04:53
 ---
-# Hi! I'm Eghosa Gabriel 
-### A Dotnet Software developer with a passion for learning new things and solving problems using technology. I welcome challenges that bring out the genius in me.
+### Join the EGabriel Backend Development Bootcamp... Free!
 
-### Building the [#.NetBookStudy](https://www.dotnetbookstudy.com) community.
+<img src="https://res.cloudinary.com/virifortissimi/image/upload/v1674822100/Group_5.png" class="" width="auto" height="auto" alt="Egabriel Bootcamp flier" />
 
-### Connect with me at [connect@egabriel.dev](mailto:connect@egabriel.dev?subject=I%20would%20like%20to%20connect%20with%20you)
-### Hire me at by sending an email to [hire_me@egabriel.dev](mailto:hire_me@egabriel.dev)
+### Get access to what you'd need to improve your skills in Backend Development, learning different technologies, concepts and development processes while working with a community of learners.
 
-## Skills
+### [Complete this form](https://forms.gle/7rjYuSarZACMrkSC6) to apply for the Bootcamp.
 
-> API Design/Implementation, Cloud-native patterns/technologies, containerization, customer advocacy, technical writing, communication, and public speaking skills.
+# What is the Bootcamp and How does it work?
+### The Bootcamp is a community of learners coming together to build softwares from scratch trying out different technologies so as to attain experience using those technologies whilst working either individually or as a team. By completing the Bootcamp and its activities, you'll on your way to developing solutions as a/an junior/intermediate dev.
 
-## Accomplishment
+# Some of the Bootcamp curriculum.
+- Intro to the world of C#
+- Basic Crud Applications
+- Architectures (Onion/Clean)
+- Microservices
+- Grpc
+- Storage using MongoDB or/and SQL
 
-- Recipient of Microsoft Certified: Azure Fundamentals Certificate. Click [here](https://www.credly.com/badges/2df0adf9-dc36-4b8f-bad6-58fa40aeebba?source=linked_in_profile) to verify
-- Recipient of AWS Certified Cloud Practitioner Certificate. Click [here](https://www.credly.com/badges/6cee3167-af84-4614-b783-61b4aa6d6a12?source=linked_in_profile) to verify
+### [Complete this form](https://forms.gle/7rjYuSarZACMrkSC6) to apply for the Bootcamp.
 
-## Speaking Engagements
-- Cohost of the [.Net Book Study](https://www.youtube.com/watch?v=TmKTND9m8OI&list=PL1QoqKQg7_kZkZHg8oJJoACNeFonEzksB) where we discuss everything DotNet weekly
-- Dotnet Lagos User group Volunteer
-- Panelist, [Azure Nigeria Community Conference 2022](https://www.youtube.com/watch?v=X7Ilo6xQnBc), Open Source in Africa
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeti0bOdAjf2iT63TD-D6Lmk2_-eBYzuOmKRVdaQA8XDRgj7w/viewform?embedded=true" width="640" height="3286" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
+# FAQ
+## This is completely free? What's the catch?
+> Yes, this is free. I like to give back as much as possible since I also benefitted from a program such as this. However if you'd like to show support either to me or any of the learners, That would be great as well.
+
+## What would be the duration of the bootcamp?
+> The bootcamp should run for 2 to 3 months.
+
+## Would the Bootcamp be physical?
+> Sadly, At this point we can only host virtual bootcamps. So all training, learning and discussions will be done on virtual platforms.
+
+## Since this is free. How can i support the program?
+> You can support the program in any of this 3 ways:
+> - You can feature on any of our social streams(Youtube, TwitterSpace, Podcast)
+> - You can donate to the program and specify what you want it used for
+> - You can write articles about the program, about what you're learning or anything else that would be useful to other developers and have it feature on our blog
+> To do any of this reach out to me via email at [connect@egabriel.dev](mailto:connect@egabriel.dev?subject=I%20would%20like%20to%20support%20the%20program)
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7334225597653931"
      crossorigin="anonymous"></script>
