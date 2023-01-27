@@ -5,12 +5,12 @@ date: 2022-06-11 11:04:53
 
 <img src="https://res.cloudinary.com/virifortissimi/image/upload/v1674822100/Group_5.png" class="" width="auto" height="auto" alt="Egabriel Bootcamp flier" />
 
-Get access to what you'd need to improve your skills in Backend Development, learning different technologies, concepts and development processes while working with a community of learners.
+Get access to what you'd need to improve your skills in Backend Development, learning different technologies, concepts, and development processes while working with a community of learners.
 
 ### [Complete this form](https://forms.gle/7rjYuSarZACMrkSC6) to apply for the Bootcamp.
 
 # What is the Bootcamp and How does it work?
-The Bootcamp is a community of learners coming together to build softwares from scratch trying out different technologies so as to attain experience using those technologies whilst working either individually or as a team. By completing the Bootcamp and its activities, you'll on your way to developing solutions as a/an junior/intermediate dev.
+The Bootcamp is a community of learners coming together to build software from scratch trying out different technologies to attain experience using those technologies while working either individually or as a team. By completing the Bootcamp and its activities, you'll be on your way to developing solutions as a/an junior/intermediate dev.
 
 # Some of the Bootcamp curriculum.
 - Intro to the world of C#
