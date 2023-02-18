@@ -1,5 +1,5 @@
 ---
-title: Entering the Furnace: My Quest for Personal and Professional Growth by Oluwafemi Dally
+title: Entering the Furnace, My Quest for Personal and Professional Growth by Oluwafemi Dally
 date: 2023-02-18 23:55:20
 tags: [ "learning", "growth" ]
 categories: ["bootcamp"]
