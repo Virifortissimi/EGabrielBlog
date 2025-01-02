@@ -9,7 +9,7 @@ As a potential software developer with some programming knowledge and a little b
 <!-- more -->
 To that end, I enrolled in a .NET programming bootcamp. Here’s what I hope to achieve in the [bootcamp](https://www.egabriel.dev/bootcamp/), and how I plan to achieve my goals.
 
-**Learn the Fundamentals of C# Programming:*** My first goal is to gain a strong understanding of the fundamentals of C# programming. This includes learning about data types, variables, operators, control structures, and functions. I hope to be able to write C# code from scratch and understand how to leverage Visual Studio Code (I use Linux)to build .NET applications. To achieve this goal, I plan to use all resources provided and complete all assignments and projects on time.
+**Learn the Fundamentals of C# Programming:** My first goal is to gain a strong understanding of the fundamentals of C# programming. This includes learning about data types, variables, operators, control structures, and functions. I hope to be able to write C# code from scratch and understand how to leverage Visual Studio Code (I use Linux)to build .NET applications. To achieve this goal, I plan to use all resources provided and complete all assignments and projects on time.
 
 **Build Complex Applications Using .NET:** My second goal is to learn how to build complex applications using .NET. This includes working with object-oriented programming principles, such as classes, objects, inheritance, and polymorphism. I hope to be able to build applications that can handle large amounts of data and interact with external APIs. To achieve this goal, I plan to work on individual projects and collaborate with other participants on group projects.
 
