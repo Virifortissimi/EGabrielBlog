@@ -56,8 +56,9 @@ export class SlideMenuComponent {
     { path: '/about', text: 'About' },
     { path: '/features', text: 'Features' },
     { path: '/projects', text: 'Work' },
-    { path: '/blog', text: 'Writing' },
+    { path: 'https://codease.hashnode.dev', text: 'Writing' },
     { path: '/community', text: 'Community' },
-    { path: '/contact', text: 'Contact' }
+    { path: '/videos', text: 'Videos' },
+    { path: 'mailto:connect@egabriel.dev', text: 'Contact' }
   ];
 }
