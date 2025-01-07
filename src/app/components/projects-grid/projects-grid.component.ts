@@ -10,10 +10,10 @@ import { Component } from '@angular/core';
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="group cursor-pointer">
             <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">
-              E-commerce Platform
+              Foodbot
             </h3>
             <p class="text-gray-600">
-              Microservices architecture handling 10k+ daily transactions
+              AI-Powered Web API with Dynamic Angular UI
             </p>
           </div>
 

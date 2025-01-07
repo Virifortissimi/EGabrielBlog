@@ -10,16 +10,15 @@ import { Component } from '@angular/core';
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-2xl font-bold mb-2">E-commerce Platform Backend</h2>
+            <h2 class="text-2xl font-bold mb-2">FoodBot</h2>
             <p class="text-gray-600 mb-4">
-              A scalable microservices architecture handling product management, 
-              order processing, and inventory tracking.
+              AI-Powered Web API with Dynamic Angular UI
             </p>
             <div class="mb-4">
               <h3 class="font-semibold">Technologies:</h3>
-              <p>Node.js, Express, MongoDB, Redis, Docker</p>
+              <p>Dotnet API, Open AI, MongoDB, Redis, Docker, Angular</p>
             </div>
-            <a href="#" class="text-blue-500 hover:text-blue-700">View Details →</a>
+            <a href="https://foodbot.ng" class="text-blue-500 hover:text-blue-700">View Details →</a>
           </div>
 
           <div class="bg-white rounded-lg shadow-md p-6">
@@ -30,7 +29,7 @@ import { Component } from '@angular/core';
             </p>
             <div class="mb-4">
               <h3 class="font-semibold">Technologies:</h3>
-              <p>Python, FastAPI, PostgreSQL, Apache Kafka</p>
+              <p>Dotnet API, AspNetCore, MsSQL, Dapr, Kafka</p>
             </div>
             <a href="#" class="text-blue-500 hover:text-blue-700">View Details →</a>
           </div>
