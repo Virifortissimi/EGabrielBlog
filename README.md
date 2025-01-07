@@ -1,2 +1,0 @@
-# EGabrielBlog
-My blog
