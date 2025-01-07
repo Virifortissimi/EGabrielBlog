@@ -43,6 +43,18 @@ import { RouterLink } from '@angular/router';
         >
           {{link.text}}
         </a>
+        <a href="https://codease.hashnode.dev" 
+           target="_blank"
+          class="text-3xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+        >
+          Writing
+        </a>
+        <a href="mailto:connect@egabriel.dev" 
+           target="_blank"
+           class="text-3xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+        >
+          Contact
+        </a>
       </div>
     </nav>
   `
@@ -56,9 +68,7 @@ export class SlideMenuComponent {
     { path: '/about', text: 'About' },
     { path: '/features', text: 'Features' },
     { path: '/projects', text: 'Work' },
-    { path: 'https://codease.hashnode.dev', text: 'Writing' },
     { path: '/community', text: 'Community' },
     { path: '/videos', text: 'Videos' },
-    { path: 'mailto:connect@egabriel.dev', text: 'Contact' }
   ];
 }

@@ -5,10 +5,10 @@ import { Component } from '@angular/core';
   standalone: true,
   template: `
     <section class="min-h-screen flex items-center px-6 bg-gradient-to-br from-gray-50 to-white">
-      <div class="container mx-auto">
+      <div class="container mx-auto mt-24">
         <div class="flex flex-col md:flex-row items-center gap-12">
           <!-- Profile Image -->
-          <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-lg">
+          <div class="w-64 h-74 rounded-full overflow-hidden border-4 border-white shadow-lg">
             <img 
               src="https://res.cloudinary.com/virifortissimi/image/upload/c_crop,g_auto,h_1500,w_1024/Goals/ip1vzkxsuegxxgzzgkcr" 
               alt="Emmanuel Gabriel"
