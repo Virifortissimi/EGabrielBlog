@@ -22,8 +22,9 @@ import { SlideMenuComponent } from '../shared/slide-menu/slide-menu.component';
           <li><a routerLink="/about">ABOUT</a></li>
           <li><a routerLink="/features">FEATURES</a></li>
           <li><a routerLink="/projects">WORK</a></li>
-          <li><a href="https://egabriel.hashnode.dev" target="_blank">WRITING</a></li>
+          <li><a href="https://codease.hashnode.dev" target="_blank">WRITING</a></li>
           <li><a routerLink="/community">COMMUNITY</a></li>
+          <li><a routerLink="/videos">VIDEOS</a></li>
           <li><a href="mailto:connect@egabriel.dev" target="_blank">CONTACT</a></li>
         </ul>
 

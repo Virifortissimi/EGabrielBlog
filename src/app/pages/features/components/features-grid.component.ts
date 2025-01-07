@@ -26,7 +26,7 @@ export class FeaturesGridComponent {
       title: 'API Development',
       description: 'RESTful and GraphQL APIs built with best practices for performance and scalability.',
       icon: 'code',
-      technologies: ['Node.js', 'Express', 'GraphQL']
+      technologies: ['Dotnet', 'AspNet', 'GraphQL', 'gRPC']
     },
     {
       title: 'System Architecture',
@@ -38,25 +38,25 @@ export class FeaturesGridComponent {
       title: 'Database Design',
       description: 'Optimized database schemas and query performance for high-traffic applications.',
       icon: 'database',
-      technologies: ['PostgreSQL', 'MongoDB', 'Redis']
+      technologies: ['PostgreSQL', 'MongoDB', 'Redis', 'MSSQL', 'MySQL']
     },
     {
       title: 'Cloud Infrastructure',
       description: 'Cloud-native solutions with focus on scalability and reliability.',
       icon: 'cloud',
-      technologies: ['AWS', 'GCP', 'Azure']
+      technologies: ['AWS', 'Azure']
     },
     {
       title: 'Security Implementation',
       description: 'Robust security measures and authentication systems for enterprise applications.',
       icon: 'security',
-      technologies: ['OAuth', 'JWT', 'SSL/TLS']
+      technologies: ['OAuth', 'JWT', 'SSL/TLS', 'Microsoft Identity']
     },
     {
       title: 'Performance Optimization',
       description: 'System optimization for high throughput and low latency operations.',
       icon: 'performance',
-      technologies: ['Caching', 'Load Balancing', 'CDN']
+      technologies: ['Caching', 'Load Balancing', 'CDN', 'Indexing']
     }
   ];
 }

@@ -26,6 +26,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/community/community.component').then(m => m.CommunityComponent)
   },
   {
+    path: 'videos',
+    loadComponent: () => import('./pages/videos/video.component').then(m => m.VideoComponent)
+  },
+  {
     path: 'features',
     loadComponent: () => import('./pages/features/features.component').then(m => m.FeaturesComponent)
   },

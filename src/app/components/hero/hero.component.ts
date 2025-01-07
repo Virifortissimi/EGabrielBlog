@@ -70,7 +70,7 @@ import { Component } from '@angular/core';
                 <i class="fab fa-youtube"></i>
               </a>
               <a 
-                href="https://egabriel.hashnode.dev" 
+                href="https://codease.hashnode.dev" 
                 target="_blank"
                 class="text-gray-600 hover:text-blue-600 transition-colors text-xl"
                 title="Hashnode"
