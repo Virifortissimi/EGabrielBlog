@@ -1,0 +1,225 @@
+/* ---------------------------------------------------
+   CODE EDITOR WINDOW
+---------------------------------------------------- */
+.editor-window {
+    width: 95%;
+    max-width: 1100px;
+    background: var(--panel);
+    border-radius: 6px;
+    overflow-y: auto;
+    box-shadow: 0 0 40px rgba(0,0,0,0.4);
+    max-height: 90vh;
+}
+
+/* Title bar */
+.title-bar {
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    background: #181a1f;
+    color: #ccc;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.title-bar .circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.circle.red { background: #ff5f56; }
+.circle.yellow { background: #ffbd2e; }
+.circle.green { background: #27c93f; }
+
+/* File tab bar */
+.tab-bar {
+    background: #21252b;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    color: #dcdfe4;
+    border-bottom: 1px solid #2d3137;
+}
+
+/* ---------------------------------------------------
+   CODE AREA
+---------------------------------------------------- */
+.code-area {
+    display: flex;
+    font-size: 0.95rem;
+}
+
+/* Line numbers */
+.line-numbers {
+    background: #1b1d22;
+    padding: 18px 15px;
+    user-select: none;
+    color: var(--line-num);
+    border-right: 1px solid #2d3137;
+}
+
+.line-numbers div {
+    height: 24px;
+}
+
+/* YAML content */
+.yaml-container {
+    padding: 18px 22px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.yaml-line {
+    min-height: 24px;
+    line-height: 24px;
+    transition: 0.2s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0;
+    margin: 0;
+}
+
+.yaml-line:hover {
+    transform: translateX(4px);
+}
+
+/* Prevent line number misalignment */
+.line-numbers {
+    flex-shrink: 0;
+}
+
+.yaml-container {
+    flex-grow: 1;
+    overflow-x: auto;
+}
+
+/* ---------------------------------------------------
+   YAML FORMATTING
+---------------------------------------------------- */
+.indent-1 {
+    padding-left: 36px;
+    position: relative;
+}
+
+.indent-1::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--indent);
+    opacity: 0.5;
+}
+
+.indent-1:hover::before {
+    background: var(--indent-hover);
+    opacity: 1;
+}
+
+.indent-2 {
+    padding-left: 72px;
+    position: relative;
+}
+
+.indent-2::before {
+    content: '';
+    position: absolute;
+    left: 54px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--indent);
+    opacity: 0.5;
+}
+
+.indent-2:hover::before {
+    background: var(--indent-hover);
+    opacity: 1;
+}
+
+.indent-3 {
+    padding-left: 108px;
+    position: relative;
+}
+
+.indent-3::before {
+    content: '';
+    position: absolute;
+    left: 90px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--indent);
+    opacity: 0.5;
+}
+
+.indent-3:hover::before {
+    background: var(--indent-hover);
+    opacity: 1;
+}
+
+.key {
+    color: var(--key);
+    font-weight: 600;
+}
+
+.string {
+    color: var(--string);
+}
+
+.list-marker {
+    color: var(--marker);
+    font-weight: 700;
+}
+
+/* Links */
+.link a {
+    color: var(--link);
+    text-decoration: none;
+    transition: 0.15s ease;
+}
+
+.link a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* ---------------------------------------------------
+   CURSOR ANIMATION
+---------------------------------------------------- */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background: var(--cursor);
+    margin-left: 4px;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    50.1%, 100% { opacity: 0; }
+}
+
+/* ---------------------------------------------------
+   THEME TOGGLE BUTTON
+---------------------------------------------------- */
+.theme-button {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid #555;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+.theme-button:hover {
+    background: #3a3f4b;
+}

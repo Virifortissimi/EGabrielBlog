@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
+
+/* ---------------------------------------------------
+   ROOT THEME VARIABLES (dark mode default)
+---------------------------------------------------- */
+:root {
+    --bg: #1e1f24;
+    --panel: #2a2d32;
+    --text: #c9ccd6;
+    --line-num: #4b5261;
+    --key: #e06c75;
+    --string: #98c379;
+    --marker: #61afef;
+    --link: #c678dd;
+    --indent: #3a404c;
+    --indent-hover: #4fbcff;
+    --cursor: #98c379;
+}
+
+/* Light theme */
+:root.light {
+    --bg: #fafafa;
+    --panel: #ffffff;
+    --text: #3a3a3a;
+    --line-num: #b6b6b6;
+    --key: #d12f4b;
+    --string: #319455;
+    --marker: #2a7de1;
+    --link: #a33acc;
+    --indent: #d3d3d3;
+    --indent-hover: #2a7de1;
+    --cursor: #319455;
+}
+
+/* ---------------------------------------------------
+   GLOBAL
+---------------------------------------------------- */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Roboto Mono", monospace;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}

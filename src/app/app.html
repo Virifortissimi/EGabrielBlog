@@ -1,0 +1,98 @@
+<button class="theme-button" (click)="toggleTheme()">Toggle Theme</button>
+
+<div class="editor-window">
+    <!-- Top Bar -->
+    <div class="title-bar">
+        <div class="circle red"></div>
+        <div class="circle yellow"></div>
+        <div class="circle green"></div>
+        <span style="margin-left: 12px;">deets.yml — {{ profile.name }}</span>
+    </div>
+
+    <!-- File Tab -->
+    <div class="tab-bar">
+        deets.yml
+    </div>
+
+    <!-- Code Area -->
+    <div class="code-area">
+        <!-- LINE NUMBERS -->
+        <div class="line-numbers">
+            <div *ngFor="let num of lineNumbers">{{ num }}</div>
+        </div>
+
+        <!-- YAML CONTENT -->
+        <div class="yaml-container">
+            <!-- Line 1: Profile -->
+            <div class="yaml-line"><span class="key">user_profile</span>:</div>
+            <div class="yaml-line indent-1"><span class="key">name</span>: <span class="string">"{{ profile.name }}"</span></div>
+            <div class="yaml-line indent-1"><span class="key">title</span>: <span class="string">"{{ profile.title }}"</span></div>
+            <div class="yaml-line indent-1"><span class="key">location</span>: <span class="string">"{{ profile.location }}"</span></div>
+            <div class="yaml-line indent-1"><span class="key">company</span>: <span class="string">"{{ profile.company }}"</span></div>
+            <div class="yaml-line indent-1"><span class="key">education</span>: <span class="string">"{{ profile.education }}"</span><span class="cursor"></span></div>
+            
+            <!-- Line 7: Blank -->
+            <div class="yaml-line">&nbsp;</div>
+            
+            <!-- Line 8: Contact -->
+            <div class="yaml-line"><span class="key">contact_info</span>:</div>
+            <div class="yaml-line indent-1"><span class="key">email</span>: <span class="string">"{{ contact.email }}"</span></div>
+            <div class="yaml-line indent-1"><span class="key">website</span>: <span class="link"><a [href]="contact.website" target="_blank">"{{ contact.websiteDisplay }}"</a></span></div>
+            <div class="yaml-line indent-1"><span class="key">linkedin</span>: <span class="link"><a [href]="contact.linkedinUrl" target="_blank">"{{ contact.linkedin }}"</a></span></div>
+            <div class="yaml-line indent-1"><span class="key">github</span>: <span class="link"><a [href]="contact.githubUrl" target="_blank">"{{ contact.github }}"</a></span></div>
+            
+            <!-- Line 13: Blank -->
+            <div class="yaml-line">&nbsp;</div>
+            
+            <!-- Line 14: Skills -->
+            <div class="yaml-line"><span class="key">technical_skills</span>:</div>
+            <div class="yaml-line indent-1" *ngFor="let skill of skills">
+                <span class="list-marker">-</span> <span class="string">{{ skill }}</span>
+            </div>
+            
+            <!-- Line 25: Blank -->
+            <div class="yaml-line">&nbsp;</div>
+            
+            <!-- Line 26: Experience -->
+            <div class="yaml-line"><span class="key">experience</span>:</div>
+            <ng-container *ngFor="let exp of experience; let i = index">
+                <div class="yaml-line indent-1"><span class="list-marker">-</span> <span class="key">role</span>: <span class="string">"{{ exp.role }}"</span></div>
+                <div class="yaml-line indent-2"><span class="key">company</span>: <span class="string">"{{ exp.company }}"</span></div>
+                <div class="yaml-line indent-2"><span class="key">period</span>: <span class="string">"{{ exp.period }}"</span></div>
+                <div class="yaml-line indent-2"><span class="key">description</span>: <span class="string">"{{ exp.description }}"</span></div>
+            </ng-container>
+            
+            <!-- Line 39: Blank -->
+            <div class="yaml-line">&nbsp;</div>
+            
+            <!-- Line 40: Certifications -->
+            <div class="yaml-line"><span class="key">certifications</span>:</div>
+            <div class="yaml-line indent-1" *ngFor="let cert of certifications">
+                <span class="list-marker">-</span> <span class="string">{{ cert }}</span>
+            </div>
+            
+            <!-- Blank -->
+            <div class="yaml-line">&nbsp;</div>
+            
+            <!-- Open Source Works -->
+            <div class="yaml-line"><span class="key">open_source_works</span>:</div>
+            <ng-container *ngFor="let work of openSourceWorks">
+                <div class="yaml-line indent-1"><span class="list-marker">-</span> <span class="key">title</span>: <span class="string">"{{ work.title }}"</span></div>
+                <div class="yaml-line indent-2"><span class="key">description</span>: <span class="string">"{{ work.description }}"</span></div>
+                <div class="yaml-line indent-2"><span class="key">links</span>:</div>
+                <div class="yaml-line indent-3" *ngFor="let link of work.links">
+                    <span class="list-marker">-</span> <span class="link"><a [href]="link.url" target="_blank">"{{ link.label }}"</a></span>
+                </div>
+            </ng-container>
+            
+            <!-- Blank -->
+            <div class="yaml-line">&nbsp;</div>
+            
+            <!-- Bio -->
+            <div class="yaml-line"><span class="key">bio</span>:</div>
+            <div class="yaml-line indent-1">
+                <span class="string">"{{ bio }}"</span>
+      </div>
+      </div>
+    </div>
+  </div>
