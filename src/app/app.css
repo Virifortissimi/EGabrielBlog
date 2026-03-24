@@ -49,6 +49,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
+  order: 1;
   color: var(--text-strong);
   text-decoration: none;
   font-weight: 700;
@@ -79,9 +80,17 @@
   border-color: var(--accent-soft);
 }
 
+.header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  order: 3;
+}
+
 /* ─── Navigation ─── */
 .site-nav {
   display: inline-flex;
+  order: 2;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.35rem;
@@ -120,8 +129,36 @@
   transform: translateY(-1px);
 }
 
+.menu-button {
+  display: none;
+  order: 1;
+}
+
+.menu-button__line {
+  width: 1.15rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition:
+    transform var(--transition-base),
+    opacity var(--transition-base);
+}
+
+.menu-button__line--top-open {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-button__line--middle-open {
+  opacity: 0;
+}
+
+.menu-button__line--bottom-open {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
 /* ─── Theme toggle ─── */
 .theme-button {
+  order: 2;
   border: 1px solid var(--border-strong);
   background: var(--surface-strong);
   color: var(--text-strong);
@@ -150,6 +187,24 @@
 
 .theme-button:active {
   transform: translateY(0) scale(0.97);
+}
+
+.icon-button {
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-button svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 /* ─── Hero ─── */
@@ -781,25 +836,60 @@
 
 @media (max-width: 760px) {
   .site-header {
-    flex-direction: column;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.85rem;
+  }
+
+  .brand-mark__text {
+    font-size: 0.95rem;
+  }
+
+  .header-actions {
+    justify-self: end;
   }
 
   .site-nav {
-    justify-content: flex-start;
+    display: none;
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+    padding: 0.7rem;
     border-radius: 1.1rem;
+  }
+
+  .site-nav--open {
+    display: flex;
+  }
+
+  .site-nav a {
+    width: 100%;
+    text-align: left;
+    border-radius: 0.9rem;
+  }
+
+  .menu-button {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.26rem;
   }
 
   .theme-button,
   .button,
   .project-links a {
-    width: 100%;
     justify-content: center;
   }
 
   .hero-actions,
   .contact-actions {
     display: grid;
+  }
+
+  .button,
+  .project-links a {
+    width: 100%;
   }
 
   .link-list {

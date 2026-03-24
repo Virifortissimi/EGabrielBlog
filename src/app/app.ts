@@ -366,6 +366,7 @@ export class App implements OnInit {
   ];
 
   protected isLightTheme = false;
+  protected isMobileNavOpen = false;
 
   constructor(
     private readonly renderer: Renderer2,
@@ -383,6 +384,14 @@ export class App implements OnInit {
     return this.isLightTheme ? 'Switch to dark mode' : 'Switch to light mode';
   }
 
+  protected get themeIcon(): string {
+    return this.isLightTheme ? 'moon' : 'sun';
+  }
+
+  protected get mobileMenuLabel(): string {
+    return this.isMobileNavOpen ? 'Close navigation menu' : 'Open navigation menu';
+  }
+
   ngOnInit(): void {
     const theme = this.resolveInitialTheme();
     this.applyTheme(theme);
@@ -390,6 +399,14 @@ export class App implements OnInit {
 
   protected toggleTheme(): void {
     this.applyTheme(this.isLightTheme ? 'dark' : 'light');
+  }
+
+  protected toggleMobileNav(): void {
+    this.isMobileNavOpen = !this.isMobileNavOpen;
+  }
+
+  protected closeMobileNav(): void {
+    this.isMobileNavOpen = false;
   }
 
   private resolveInitialTheme(): Theme {

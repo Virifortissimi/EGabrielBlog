@@ -7,20 +7,41 @@
       <span class="brand-mark__text">Eghosa Gabriel</span>
     </a>
 
-    <nav class="site-nav" aria-label="Primary">
-      <a *ngFor="let item of navLinks" [href]="item.href">{{ item.label }}</a>
-    </nav>
+    <div class="header-actions">
+      <button
+        class="theme-button icon-button"
+        type="button"
+        [attr.aria-label]="themeLabel"
+        [attr.aria-pressed]="isLightTheme"
+        (click)="toggleTheme()"
+      >
+        <svg *ngIf="themeIcon === 'sun'" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 3.75v2.5M12 17.75v2.5M18.25 12h2.5M3.25 12h2.5M17.13 6.87l1.77-1.77M5.1 18.9l1.77-1.77M17.13 17.13l1.77 1.77M5.1 5.1l1.77 1.77M16 12a4 4 0 1 1-8 0a4 4 0 0 1 8 0Z"
+          />
+        </svg>
+        <svg *ngIf="themeIcon === 'moon'" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.25 14.14A8.25 8.25 0 0 1 9.86 3.75a8.25 8.25 0 1 0 10.39 10.39Z" />
+        </svg>
+      </button>
 
-    <button
-      class="theme-button"
-      type="button"
-      [attr.aria-label]="themeLabel"
-      [attr.aria-pressed]="isLightTheme"
-      (click)="toggleTheme()"
-    >
-      {{ isLightTheme ? '🌙' : '☀️' }}
-      {{ isLightTheme ? 'Dark mode' : 'Light mode' }}
-    </button>
+      <button
+        class="menu-button icon-button"
+        type="button"
+        [attr.aria-label]="mobileMenuLabel"
+        [attr.aria-expanded]="isMobileNavOpen"
+        aria-controls="site-nav"
+        (click)="toggleMobileNav()"
+      >
+        <span class="menu-button__line" [class.menu-button__line--top-open]="isMobileNavOpen"></span>
+        <span class="menu-button__line" [class.menu-button__line--middle-open]="isMobileNavOpen"></span>
+        <span class="menu-button__line" [class.menu-button__line--bottom-open]="isMobileNavOpen"></span>
+      </button>
+    </div>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary" [class.site-nav--open]="isMobileNavOpen">
+      <a *ngFor="let item of navLinks" [href]="item.href" (click)="closeMobileNav()">{{ item.label }}</a>
+    </nav>
   </header>
 
   <main id="main-content">
@@ -36,8 +57,8 @@
         </p>
 
         <div class="hero-actions">
-          <a class="button button--primary" href="#projects">View featured work <span class="button__arrow">→</span></a>
-          <a class="button button--ghost" href="mailto:hello@egabriel.dev">Get in touch <span class="button__arrow">→</span></a>
+          <a class="button button--primary" href="#projects">View featured work <span class="button__arrow">&rarr;</span></a>
+          <a class="button button--ghost" href="mailto:hello@egabriel.dev">Get in touch <span class="button__arrow">&rarr;</span></a>
         </div>
 
         <ul class="link-list" aria-label="Primary links">
@@ -148,7 +169,7 @@
         <article class="panel-card panel-card--highlight">
           <h3>How I think about engineering</h3>
           <p>
-            I've been both the developer and the business owner — which means I understand
+            I've been both the developer and the business owner &mdash; which means I understand
             delivery risk, budget constraints, and what "done" actually means to a client.
             I gravitate toward backend problems where architectural choices show up in reliability,
             scale, and developer maintenance cost.
@@ -277,20 +298,20 @@
         <p class="section-kicker">Contact</p>
         <h2 id="contact-title">Open to senior remote roles and high-impact consulting.</h2>
         <p>
-          The best fit is usually a product or platform team that needs .NET architecture done right —
+          The best fit is usually a product or platform team that needs .NET architecture done right &mdash;
           service design, operational tradeoffs, and architecture decisions that survive production.
         </p>
       </div>
 
       <div class="contact-actions">
-        <a class="button button--primary" href="mailto:hello@egabriel.dev">Start a conversation <span class="button__arrow">→</span></a>
+        <a class="button button--primary" href="mailto:hello@egabriel.dev">Start a conversation <span class="button__arrow">&rarr;</span></a>
         <a
           class="button button--ghost"
           href="https://www.linkedin.com/in/emmanuel-eghosa-gabriel/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Connect on LinkedIn <span class="button__arrow">→</span>
+          Connect on LinkedIn <span class="button__arrow">&rarr;</span>
         </a>
       </div>
     </section>
