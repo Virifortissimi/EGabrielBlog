@@ -1,50 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap');
 
-/* ---------------------------------------------------
-   ROOT THEME VARIABLES (dark mode default)
----------------------------------------------------- */
 :root {
-    --bg: #1e1f24;
-    --panel: #2a2d32;
-    --text: #c9ccd6;
-    --line-num: #4b5261;
-    --key: #e06c75;
-    --string: #98c379;
-    --marker: #61afef;
-    --link: #c678dd;
-    --indent: #3a404c;
-    --indent-hover: #4fbcff;
-    --cursor: #98c379;
+  color-scheme: dark;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --bg: #07111f;
+  --bg-secondary: #0f1f35;
+  --surface: rgba(10, 20, 34, 0.82);
+  --surface-soft: rgba(14, 28, 48, 0.8);
+  --surface-strong: rgba(21, 39, 65, 0.95);
+  --editor-chrome: #111d31;
+  --editor-tab: #13233c;
+  --editor-gutter: #0d182a;
+
+  --text-strong: #f2f7ff;
+  --text-soft: #d5e2f3;
+  --text-muted: #a7b6c9;
+  --text-faint: #698099;
+
+  --accent-strong: #ff8c42;
+  --accent-soft: #56d6c2;
+
+  --border-soft: rgba(132, 165, 205, 0.18);
+  --border-strong: rgba(132, 165, 205, 0.34);
+
+  --code-key: #ff9b71;
+  --code-string: #8fe6cc;
+  --code-marker: #7db8ff;
+  --code-link: #ffd37f;
+
+  --transition-base: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Light theme */
 :root.light {
-    --bg: #fafafa;
-    --panel: #ffffff;
-    --text: #3a3a3a;
-    --line-num: #b6b6b6;
-    --key: #d12f4b;
-    --string: #319455;
-    --marker: #2a7de1;
-    --link: #a33acc;
-    --indent: #d3d3d3;
-    --indent-hover: #2a7de1;
-    --cursor: #319455;
+  color-scheme: light;
+  --bg: #f4ede1;
+  --bg-secondary: #eadfcb;
+  --surface: rgba(255, 250, 242, 0.86);
+  --surface-soft: rgba(255, 247, 236, 0.92);
+  --surface-strong: rgba(255, 252, 246, 0.98);
+  --editor-chrome: #efe4d1;
+  --editor-tab: #f6ecdc;
+  --editor-gutter: #eadfcb;
+
+  --text-strong: #1f2430;
+  --text-soft: #364050;
+  --text-muted: #5f6c7b;
+  --text-faint: #89919d;
+
+  --accent-strong: #c9632c;
+  --accent-soft: #0d8e87;
+
+  --border-soft: rgba(103, 89, 69, 0.14);
+  --border-strong: rgba(103, 89, 69, 0.24);
+
+  --code-key: #c9632c;
+  --code-string: #0d8e87;
+  --code-marker: #3d6dd8;
+  --code-link: #9f5c0f;
 }
 
-/* ---------------------------------------------------
-   GLOBAL
----------------------------------------------------- */
 * {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: "Roboto Mono", monospace;
-    margin: 0;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 140, 66, 0.2), transparent 28%),
+    radial-gradient(circle at 85% 0%, rgba(86, 214, 194, 0.18), transparent 32%),
+    linear-gradient(180deg, var(--bg-secondary), var(--bg));
+  color: var(--text-soft);
+  font-family: var(--font-display);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 88%);
+  opacity: 0.12;
+}
+
+app-root {
+  display: block;
+  padding: clamp(1.25rem, 2.5vw, 2rem) clamp(1.25rem, 3.5vw, 2.5rem) 5rem;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 3px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

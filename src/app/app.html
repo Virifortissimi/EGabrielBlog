@@ -1,98 +1,298 @@
-<button class="theme-button" (click)="toggleTheme()">Toggle Theme</button>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-<div class="editor-window">
-    <!-- Top Bar -->
-    <div class="title-bar">
-        <div class="circle red"></div>
-        <div class="circle yellow"></div>
-        <div class="circle green"></div>
-        <span style="margin-left: 12px;">deets.yml — {{ profile.name }}</span>
-    </div>
+<div class="page-shell">
+  <header class="site-header">
+    <a class="brand-mark" href="#top" aria-label="Go to top">
+      <span class="brand-mark__code">&lt;/&gt;</span>
+      <span class="brand-mark__text">Eghosa Gabriel</span>
+    </a>
 
-    <!-- File Tab -->
-    <div class="tab-bar">
-        deets.yml
-    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <a *ngFor="let item of navLinks" [href]="item.href">{{ item.label }}</a>
+    </nav>
 
-    <!-- Code Area -->
-    <div class="code-area">
-        <!-- LINE NUMBERS -->
-        <div class="line-numbers">
-            <div *ngFor="let num of lineNumbers">{{ num }}</div>
+    <button
+      class="theme-button"
+      type="button"
+      [attr.aria-label]="themeLabel"
+      [attr.aria-pressed]="isLightTheme"
+      (click)="toggleTheme()"
+    >
+      {{ isLightTheme ? '🌙' : '☀️' }}
+      {{ isLightTheme ? 'Dark mode' : 'Light mode' }}
+    </button>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">I operate at the intersection of deep technical execution and commercial awareness.</p>
+        <h1>{{ profile.role }}</h1>
+        <p class="hero-intro">
+          {{ profile.intro }}
+        </p>
+        <p class="hero-summary">
+          {{ profile.summary }}
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button--primary" href="#projects">View featured work <span class="button__arrow">→</span></a>
+          <a class="button button--ghost" href="mailto:hello@egabriel.dev">Get in touch <span class="button__arrow">→</span></a>
         </div>
 
-        <!-- YAML CONTENT -->
-        <div class="yaml-container">
-            <!-- Line 1: Profile -->
-            <div class="yaml-line"><span class="key">user_profile</span>:</div>
-            <div class="yaml-line indent-1"><span class="key">name</span>: <span class="string">"{{ profile.name }}"</span></div>
-            <div class="yaml-line indent-1"><span class="key">title</span>: <span class="string">"{{ profile.title }}"</span></div>
-            <div class="yaml-line indent-1"><span class="key">location</span>: <span class="string">"{{ profile.location }}"</span></div>
-            <div class="yaml-line indent-1"><span class="key">company</span>: <span class="string">"{{ profile.company }}"</span></div>
-            <div class="yaml-line indent-1"><span class="key">education</span>: <span class="string">"{{ profile.education }}"</span><span class="cursor"></span></div>
-            
-            <!-- Line 7: Blank -->
-            <div class="yaml-line">&nbsp;</div>
-            
-            <!-- Line 8: Contact -->
-            <div class="yaml-line"><span class="key">contact_info</span>:</div>
-            <div class="yaml-line indent-1"><span class="key">email</span>: <span class="string">"{{ contact.email }}"</span></div>
-            <div class="yaml-line indent-1"><span class="key">website</span>: <span class="link"><a [href]="contact.website" target="_blank">"{{ contact.websiteDisplay }}"</a></span></div>
-            <div class="yaml-line indent-1"><span class="key">linkedin</span>: <span class="link"><a [href]="contact.linkedinUrl" target="_blank">"{{ contact.linkedin }}"</a></span></div>
-            <div class="yaml-line indent-1"><span class="key">github</span>: <span class="link"><a [href]="contact.githubUrl" target="_blank">"{{ contact.github }}"</a></span></div>
-            
-            <!-- Line 13: Blank -->
-            <div class="yaml-line">&nbsp;</div>
-            
-            <!-- Line 14: Skills -->
-            <div class="yaml-line"><span class="key">technical_skills</span>:</div>
-            <div class="yaml-line indent-1" *ngFor="let skill of skills">
-                <span class="list-marker">-</span> <span class="string">{{ skill }}</span>
-            </div>
-            
-            <!-- Line 25: Blank -->
-            <div class="yaml-line">&nbsp;</div>
-            
-            <!-- Line 26: Experience -->
-            <div class="yaml-line"><span class="key">experience</span>:</div>
-            <ng-container *ngFor="let exp of experience; let i = index">
-                <div class="yaml-line indent-1"><span class="list-marker">-</span> <span class="key">role</span>: <span class="string">"{{ exp.role }}"</span></div>
-                <div class="yaml-line indent-2"><span class="key">company</span>: <span class="string">"{{ exp.company }}"</span></div>
-                <div class="yaml-line indent-2"><span class="key">period</span>: <span class="string">"{{ exp.period }}"</span></div>
-                <div class="yaml-line indent-2"><span class="key">description</span>: <span class="string">"{{ exp.description }}"</span></div>
-            </ng-container>
-            
-            <!-- Line 39: Blank -->
-            <div class="yaml-line">&nbsp;</div>
-            
-            <!-- Line 40: Certifications -->
-            <div class="yaml-line"><span class="key">certifications</span>:</div>
-            <div class="yaml-line indent-1" *ngFor="let cert of certifications">
-                <span class="list-marker">-</span> <span class="string">{{ cert }}</span>
-            </div>
-            
-            <!-- Blank -->
-            <div class="yaml-line">&nbsp;</div>
-            
-            <!-- Open Source Works -->
-            <div class="yaml-line"><span class="key">open_source_works</span>:</div>
-            <ng-container *ngFor="let work of openSourceWorks">
-                <div class="yaml-line indent-1"><span class="list-marker">-</span> <span class="key">title</span>: <span class="string">"{{ work.title }}"</span></div>
-                <div class="yaml-line indent-2"><span class="key">description</span>: <span class="string">"{{ work.description }}"</span></div>
-                <div class="yaml-line indent-2"><span class="key">links</span>:</div>
-                <div class="yaml-line indent-3" *ngFor="let link of work.links">
-                    <span class="list-marker">-</span> <span class="link"><a [href]="link.url" target="_blank">"{{ link.label }}"</a></span>
-                </div>
-            </ng-container>
-            
-            <!-- Blank -->
-            <div class="yaml-line">&nbsp;</div>
-            
-            <!-- Bio -->
-            <div class="yaml-line"><span class="key">bio</span>:</div>
-            <div class="yaml-line indent-1">
-                <span class="string">"{{ bio }}"</span>
+        <ul class="link-list" aria-label="Primary links">
+          <li *ngFor="let link of primaryLinks">
+            <a
+              [href]="link.href"
+              [attr.target]="link.external ? '_blank' : null"
+              [attr.rel]="link.external ? 'noopener noreferrer' : null"
+            >
+              <span>{{ link.label }}</span>
+              <strong>{{ link.value }}</strong>
+            </a>
+          </li>
+        </ul>
       </div>
+
+      <aside class="editor-window" aria-label="Profile snapshot">
+        <div class="title-bar">
+          <div class="circle red"></div>
+          <div class="circle yellow"></div>
+          <div class="circle green"></div>
+          <span class="title-bar__text">profile.yml - {{ profile.shortName }}</span>
+        </div>
+
+        <div class="tab-bar">profile.yml</div>
+
+        <div class="code-area">
+          <div class="line-numbers" aria-hidden="true">
+            <div *ngFor="let num of lineNumbers">{{ num }}</div>
+          </div>
+
+          <div class="yaml-container">
+            <ng-container *ngFor="let line of editorLines; let isLast = last">
+              <div
+                class="yaml-line"
+                [ngClass]="{
+                  'indent-1': line.indent === 1,
+                  'indent-2': line.indent === 2,
+                  'yaml-line--accent': line.accent
+                }"
+              >
+                <ng-container [ngSwitch]="line.type">
+                  <ng-container *ngSwitchCase="'section'">
+                    <span class="key">{{ line.label }}</span
+                    >:
+                  </ng-container>
+
+                  <ng-container *ngSwitchCase="'field'">
+                    <span class="key">{{ line.label }}</span
+                    >:
+                    <span class="string">"{{ line.value }}"</span>
+                    <span *ngIf="isLast" class="cursor" aria-hidden="true"></span>
+                  </ng-container>
+
+                  <ng-container *ngSwitchCase="'link'">
+                    <span class="key">{{ line.label }}</span
+                    >:
+                    <span class="link">
+                      <a [href]="line.href" target="_blank" rel="noopener noreferrer"
+                        >"{{ line.value }}"</a
+                      >
+                    </span>
+                  </ng-container>
+
+                  <ng-container *ngSwitchCase="'list'">
+                    <span class="list-marker">-</span>
+                    <span class="string">{{ line.value }}</span>
+                    <span *ngIf="isLast" class="cursor" aria-hidden="true"></span>
+                  </ng-container>
+
+                  <ng-container *ngSwitchDefault>&nbsp;</ng-container>
+                </ng-container>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" aria-labelledby="proof-title">
+      <div class="section-heading">
+        <p class="section-kicker">Snapshot</p>
+        <h2 id="proof-title">Signals a hiring manager can scan in seconds.</h2>
       </div>
-    </div>
-  </div>
+
+      <div class="stats-grid">
+        <article class="stat-card" *ngFor="let stat of stats">
+          <p class="stat-card__value">{{ stat.value }}</p>
+          <p class="stat-card__label">{{ stat.label }}</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="focus-title">
+      <div class="section-heading">
+        <p class="section-kicker">Focus</p>
+        <h2 id="focus-title">What I bring to a team.</h2>
+      </div>
+
+      <div class="panel-grid panel-grid--two">
+        <article class="panel-card">
+          <h3>Technical strengths</h3>
+          <ul class="bullet-list">
+            <li *ngFor="let area of focusAreas">{{ area }}</li>
+          </ul>
+        </article>
+
+        <article class="panel-card panel-card--highlight">
+          <h3>How I think about engineering</h3>
+          <p>
+            I've been both the developer and the business owner — which means I understand
+            delivery risk, budget constraints, and what "done" actually means to a client.
+            I gravitate toward backend problems where architectural choices show up in reliability,
+            scale, and developer maintenance cost.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="section-kicker">Featured work</p>
+        <h2 id="projects-title">Projects that show how I think and what I ship.</h2>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card" *ngFor="let project of featuredProjects">
+          <p class="project-card__eyebrow">{{ project.eyebrow }}</p>
+          <h3>{{ project.title }}</h3>
+          <p class="project-card__summary">{{ project.summary }}</p>
+
+          <ul class="bullet-list">
+            <li *ngFor="let outcome of project.outcomes">{{ outcome }}</li>
+          </ul>
+
+          <ul class="tag-list" aria-label="Technology stack">
+            <li *ngFor="let item of project.stack">{{ item }}</li>
+          </ul>
+
+          <div class="project-links">
+            <a
+              *ngFor="let link of project.links"
+              [href]="link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ link.label }}
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <p class="section-kicker">Experience</p>
+        <h2 id="experience-title">Where the engineering story comes from.</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item" *ngFor="let item of experience">
+          <div class="timeline-item__meta">
+            <p class="timeline-item__period">{{ item.period }}</p>
+            <h3>{{ item.role }}</h3>
+            <p class="timeline-item__company">{{ item.company }}</p>
+          </div>
+
+          <div class="timeline-item__content">
+            <p>{{ item.summary }}</p>
+            <ul class="bullet-list">
+              <li *ngFor="let highlight of item.highlights">{{ highlight }}</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="stack" aria-labelledby="stack-title">
+      <div class="section-heading">
+        <p class="section-kicker">Tech stack</p>
+        <h2 id="stack-title">Tools and technologies I work with daily.</h2>
+      </div>
+
+      <div class="skill-groups">
+        <div class="skill-group" *ngFor="let group of skillGroups">
+          <p class="skill-group__label">{{ group.label }}</p>
+          <ul class="tag-list tag-list--wide" [attr.aria-label]="group.label + ' skills'">
+            <li *ngFor="let skill of group.items" [class.tag--core]="group.label === 'Core'">{{ skill }}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="writing" aria-labelledby="writing-title">
+      <div class="section-heading">
+        <p class="section-kicker">Writing and speaking</p>
+        <h2 id="writing-title">Public work that supports the engineering story.</h2>
+      </div>
+
+      <div class="project-grid project-grid--compact">
+        <article class="project-card" *ngFor="let item of writingAndSpeaking">
+          <p class="project-card__eyebrow">{{ item.eyebrow }}</p>
+          <h3>{{ item.title }}</h3>
+          <p class="project-card__summary">{{ item.summary }}</p>
+
+          <ul class="bullet-list">
+            <li *ngFor="let outcome of item.outcomes">{{ outcome }}</li>
+          </ul>
+
+          <div class="project-links">
+            <a
+              *ngFor="let link of item.links"
+              [href]="link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ link.label }}
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="certifications-title">
+      <div class="section-heading">
+        <p class="section-kicker">Credentials</p>
+        <h2 id="certifications-title">Certifications that support the delivery work.</h2>
+      </div>
+
+      <ul class="tag-list tag-list--wide" aria-label="Certifications">
+        <li *ngFor="let certification of certifications">{{ certification }}</li>
+      </ul>
+    </section>
+
+    <section class="contact-card" id="contact" aria-labelledby="contact-title">
+      <div>
+        <p class="section-kicker">Contact</p>
+        <h2 id="contact-title">Open to senior remote roles and high-impact consulting.</h2>
+        <p>
+          The best fit is usually a product or platform team that needs .NET architecture done right —
+          service design, operational tradeoffs, and architecture decisions that survive production.
+        </p>
+      </div>
+
+      <div class="contact-actions">
+        <a class="button button--primary" href="mailto:hello@egabriel.dev">Start a conversation <span class="button__arrow">→</span></a>
+        <a
+          class="button button--ghost"
+          href="https://www.linkedin.com/in/emmanuel-eghosa-gabriel/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Connect on LinkedIn <span class="button__arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
